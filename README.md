@@ -1,6 +1,6 @@
 # Deep Learning Projects
 
-A collection of deep learning explorations, from first principles in NumPy through Keras/TensorFlow implementations. Each folder is a self-contained study or project in a specific topic, building toward practical implementations for deep learning for computer vision.
+A collection of deep learning implementations, from first principles in NumPy through Keras/TensorFlow. Each folder is a self-contained project covering a specific topic in computer vision — neurons and backpropagation, image classification baselines, and classic CNN architectures.
 
 **Focus areas:** neural network fundamentals, backpropagation, fully connected and convolutional architectures, Keras API patterns.
 
@@ -8,9 +8,9 @@ A collection of deep learning explorations, from first principles in NumPy throu
 
 | Project | Topic | Stack | Maturity | Highlights |
 |---------|-------|-------|----------|------------|
-| [Simple Neural Net](./a_simple-neural-net/) | Fundamentals | NumPy | Notebook study | Neuron → layer → network → backprop + MNIST training |
-| [Simple Vision Model](./b_simple-vision-model/) | Image classification | TensorFlow / Keras | Exploration | Flatten + dense baseline on MNIST |
-| [LeNet Models](./c_lenet-models/) | Convolutional networks | TensorFlow / Keras | Exploration | LeNet-5 via Sequential and Model subclass APIs |
+| [Simple Neural Net](./a_simple-neural-net/) | Fundamentals | NumPy | From scratch | Neuron → layer → network → backprop + MNIST training |
+| [Simple Vision Model](./b_simple-vision-model/) | Image classification | TensorFlow / Keras | Baseline | Flatten + dense classifier on MNIST |
+| [LeNet Models](./c_lenet-models/) | Convolutional networks | TensorFlow / Keras | Architecture | LeNet-5 via Sequential and Model subclass APIs |
 
 ## How to explore
 
@@ -32,4 +32,4 @@ See individual project READMEs for details.
 
 ## About
 
-These projects document hands-on learning — understanding how neural networks work under the hood before leaning on frameworks. Suitable for reviewing fundamentals, architecture choices, and progression from scratch implementations to production-style APIs.
+Core deep learning building blocks implemented end to end: forward pass, backpropagation, mini-batch training, and convolutional architectures on MNIST. NumPy implementations establish the mechanics; Keras and TensorFlow apply the same concepts through production-style APIs.

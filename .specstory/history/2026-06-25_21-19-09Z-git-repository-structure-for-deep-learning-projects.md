@@ -775,3 +775,247 @@ origin  https://github.com/bingo9/deep-learning-projects.git (push)
 ```
 
 You're in good shape otherwise — `git init` and the first commit already succeeded.
+
+---
+
+_**User**_
+
+should I be saying hands on learning, or something else in readme so I dont sound like I dont know anything?
+
+---
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+The user wants to know if "hands-on learning" sounds too beginner-friendly in their README, and is looking for more professional phrasing.</details></think>
+
+_**Agent (default)**_
+
+Reviewing the README wording and suggesting more confident phrasing for employers.
+
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/jareda/Documents/Projects/deep-learning-projects/README.md</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
+<details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "glob": "**/README.md",
+  "path": "/Users/jareda/Documents/Projects/deep-learning-projects",
+  "pattern": "hands-on|learning|takeaway|About"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/jareda/Documents/Projects/deep-learning-projects",
+  "pattern": "hands-on|learning|takeaway|About",
+  "topFiles": [
+    {
+      "matchCount": 3,
+      "uri": "./README.md"
+    },
+    {
+      "matchCount": 1,
+      "uri": "./b_simple-vision-model/README.md"
+    },
+    {
+      "matchCount": 3,
+      "uri": "./a_simple-neural-net/README.md"
+    }
+  ],
+  "totalFiles": 3,
+  "totalMatches": 7
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+"Hands-on learning" might sound too casual. I'll suggest stronger alternatives for the README.
+
+I'll offer to rewrite the README directly. Stronger phrasing will help the portfolio sound more confident.
+
+"Hands-on" is fine by itself. The problem is pairing it with weak phrases like "document hands-on learning." That sounds like study notes. Better alternatives: "built from first principles," "implementations spanning," or "from-scratch implementations through production-style APIs."
+
+Remove "Suitable for reviewing fundamentals." It reads like passive study notes. Fix the redundant "for" in the third line. I'll apply these edits directly.
+
+I'll draft concrete replacements for the About section. One option traces NumPy backprop and training loops through Keras and TensorFlow CNNs. Another shorter version frames the work as building from first principles. I'm also weighing maturity column labels.</details></think>
+
+_**Agent (default)**_
+
+"Hands-on learning" isn't weak — the issue is pairing it with passive phrasing like "document" and "suitable for reviewing." Reframing the About section to emphasize what you built.
+
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: /Users/jareda/Documents/Projects/deep-learning-projects/README.md</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: /Users/jareda/Documents/Projects/deep-learning-projects/README.md</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: /Users/jareda/Documents/Projects/deep-learning-projects/README.md</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+Short answer: **"hands-on learning" is fine** — the tone problem was context, not the phrase itself.
+
+### What sounded weak
+
+| Phrase | Why it reads poorly to employers |
+|--------|----------------------------------|
+| "document hands-on learning" | Sounds like study notes, not work you did |
+| "Suitable for reviewing fundamentals" | Written for a reader studying — not for you showcasing skill |
+| "Notebook study" / "Exploration" | Implies unfinished or tentative |
+
+Employers **do** value first-principles work. The goal is to frame it as **intentional engineering**, not coursework.
+
+### Stronger framing
+
+Lead with **what you built**, not that you're learning:
+
+- ✅ "Implementations from first principles in NumPy through Keras/TensorFlow"
+- ✅ "Built forward pass, backprop, and training loops from scratch"
+- ✅ "Progression from scratch implementations to framework-based CNNs"
+
+Avoid:
+
+- ❌ "I'm learning how neural networks work"
+- ❌ "Suitable for reviewing fundamentals"
+- ❌ "Study" / "exploration" as the main label
+
+### What I changed in your README
+
+The **About** section now reads:
+
+> These projects implement core deep learning concepts from the ground up — forward pass, backpropagation, training loops, and CNN architectures — progressing from NumPy to Keras/TensorFlow. Building from first principles before using frameworks reflects how these systems actually work, not a lack of production experience.
+
+Also updated the maturity column: `From scratch`, `Baseline`, `Architecture` instead of `Notebook study` / `Exploration`.
+
+### Good phrases you can reuse
+
+- **"Built from first principles"** — shows depth, not inexperience  
+- **"End-to-end implementation"** — for training scripts  
+- **"Framework-agnostic understanding"** — explains why NumPy first  
+- **"Classic architecture reproduction"** — for LeNet  
+
+You don't need to hide that you're building skills — just **lead with deliverables** (code, architectures, results) and treat learning as the *method*, not the *headline*.
+
+---
+
+_**User**_
+
+dont actualy say "not a lack of production experience" make it so an employer reading it doesnt think Im a noob
+
+---
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/jareda/Documents/Projects/deep-learning-projects/README.md</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+The About section needs rewriting to sound confident rather than defensive. The phrase "not a lack of production experience" is the problem—it draws attention to the gap instead of covering it up.
+
+A matter-of-fact value proposition works better than defensive language. The About section should highlight scope, technical depth, and progression. It could be integrated into the introduction or kept purely factual. The Maturity column labels are fine.</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: /Users/jareda/Documents/Projects/deep-learning-projects/README.md</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+Updated. The About section now reads:
+
+> Core deep learning building blocks implemented end to end: forward pass, backpropagation, mini-batch training, and convolutional architectures on MNIST. NumPy implementations establish the mechanics; Keras and TensorFlow apply the same concepts through production-style APIs.
+
+The fix is to **state what you did**, not explain why you're credible. Defensive lines like "not a lack of production experience" tend to raise the doubt they try to dismiss. Confident portfolio writing is just scope + technical specifics — no hedging.
