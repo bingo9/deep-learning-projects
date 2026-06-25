@@ -1,6 +1,6 @@
 # Deep Learning Projects
 
-A collection of deep learning explorations, from first principles in NumPy through Keras/TensorFlow implementations. Each folder is a self-contained study in a specific topic, building toward practical image classification on MNIST.
+A collection of deep learning explorations, from first principles in NumPy through Keras/TensorFlow implementations. Each folder is a self-contained study or project in a specific topic, building toward practical implementations for deep learning for computer vision.
 
 **Focus areas:** neural network fundamentals, backpropagation, fully connected and convolutional architectures, Keras API patterns.
 
