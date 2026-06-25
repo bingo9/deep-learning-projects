@@ -1019,3 +1019,171 @@ Updated. The About section now reads:
 > Core deep learning building blocks implemented end to end: forward pass, backpropagation, mini-batch training, and convolutional architectures on MNIST. NumPy implementations establish the mechanics; Keras and TensorFlow apply the same concepts through production-style APIs.
 
 The fix is to **state what you did**, not explain why you're credible. Defensive lines like "not a lack of production experience" tend to raise the doubt they try to dismiss. Confident portfolio writing is just scope + technical specifics — no hedging.
+
+---
+
+_**User**_
+
+here's the output of @c_lenet-models/c_LeNet-w-Keras-train-MNIST.py 
+
+python pg99_LeNet_TF_KeraImpl_w_MNIST.py.py
+/Users/jareda/Documents/Projects/Hands-On Computer Vision with TF2/Ch2/.venv/lib/python3.12/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d (Conv2D)                      │ (None, 28, 28, 6)           │             156 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d (MaxPooling2D)         │ (None, 14, 14, 6)           │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_1 (Conv2D)                    │ (None, 10, 10, 16)          │           2,416 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_1 (MaxPooling2D)       │ (None, 5, 5, 16)            │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten (Flatten)                    │ (None, 400)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 120)                 │          48,120 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 84)                  │          10,164 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_2 (Dense)                      │ (None, 10)                  │             850 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 61,706 (241.04 KB)
+ Trainable params: 61,706 (241.04 KB)
+ Non-trainable params: 0 (0.00 B)
+Epoch 1/80
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - accuracy: 0.8543 - loss: 0.4922 - val_accuracy: 0.9581 - val_loss: 0.1395
+Epoch 2/80
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - accuracy: 0.9634 - loss: 0.1182 - val_accuracy: 0.9722 - val_loss: 0.0833
+Epoch 3/80
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - accuracy: 0.9728 - loss: 0.0868 - val_accuracy: 0.9773 - val_loss: 0.0671
+Epoch 4/80
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - accuracy: 0.9781 - loss: 0.0702 - val_accuracy: 0.9800 - val_loss: 0.0609
+Epoch 5/80
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - accuracy: 0.9814 - loss: 0.0596 - val_accuracy: 0.9816 - val_loss: 0.0606
+Epoch 6/80
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - accuracy: 0.9835 - loss: 0.0530 - val_accuracy: 0.9847 - val_loss: 0.0489
+Epoch 7/80
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - accuracy: 0.9858 - loss: 0.0462 - val_accuracy: 0.9845 - val_loss: 0.0489
+Epoch 8/80
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - accuracy: 0.9866 - loss: 0.0425 - val_accuracy: 0.9867 - val_loss: 0.0448
+Epoch 9/80
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - accuracy: 0.9878 - loss: 0.0382 - val_accuracy: 0.9877 - val_loss: 0.0400
+Epoch 10/80
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - accuracy: 0.9887 - loss: 0.0352 - val_accuracy: 0.9877 - val_loss: 0.0411
+Epoch 11/80
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - accuracy: 0.9901 - loss: 0.0321 - val_accuracy: 0.9873 - val_loss: 0.0381
+Epoch 12/80
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - accuracy: 0.9908 - loss: 0.0300 - val_accuracy: 0.9881 - val_loss: 0.0375
+Epoch 13/80
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - accuracy: 0.9912 - loss: 0.0274 - val_accuracy: 0.9856 - val_loss: 0.0447
+Epoch 14/80
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - accuracy: 0.9924 - loss: 0.0248 - val_accuracy: 0.9874 - val_loss: 0.0391
+Epoch 15/80
+1875/1875 ━━━━━━━━━━━━━━━━━━━━ 4s 2ms/step - accuracy: 0.9928 - loss: 0.0230 - val_accuracy: 0.9869 - val_loss: 0.0401
+
+Plan an update for c_lenet-models readme
+
+---
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+Planning a README update for c_lenet-models based on the Keras LeNet training output.</details></think>
+
+_**Agent (default)**_
+
+Reviewing the training script and current README to plan updates from your run results.
+
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/jareda/Documents/Projects/deep-learning-projects/c_lenet-models/c_LeNet-w-Keras-train-MNIST.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/jareda/Documents/Projects/deep-learning-projects/c_lenet-models/README.md</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search">
+<details>
+<summary>Tool use: **glob_file_search** • Searched codebase "" • **4** results in **1** directory</summary>
+
+Directory: **/Users/jareda/Documents/Projects/deep-learning-projects** (4 files)
+
+| File |
+|------|
+| `c_lenet-models/c_LeNet-w-Keras-train-MNIST.py` |
+| `c_lenet-models/README.md` |
+| `c_lenet-models/b_LeNet-w-Keras-OOP.py` |
+| `c_lenet-models/a_LeNet-w-Keras.py` |
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
+<summary>Tool use: **glob_file_search**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+The LeNet model trained successfully on MNIST. Validation accuracy reached 98.8% with a loss of 0.0375. I will plan a readme update based on these results.
+
+The model contains 61,706 parameters. It was configured with EarlyStopping after 3 epochs of no improvement. The script also has a bug: it does not reshape MNIST data to include a channel dimension, unlike the reference implementation.
+
+Keras appears to handle the missing channel dimension automatically, since the Conv2D layer outputs shape (None, 28, 28, 6). The reference scripts also incorrectly set num_channels=3.
+
+The readme update will change the maturity label to "Trained" and add the training script to the file table. Actual validation metrics will replace placeholder results. The "architecture-only" language will be removed. EarlyStopping and TensorBoard callbacks will be noted. A comparison against a simple vision baseline will be included. The root README may also be updated.</details></think>
+
+_**Agent (default)**_
+
+Checking the root README for cross-references to update.
+
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/jareda/Documents/Projects/deep-learning-projects/README.md</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/jareda/Documents/Projects/deep-learning-projects/c_lenet-models/a_LeNet-w-Keras.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>

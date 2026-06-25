@@ -10,13 +10,13 @@ A collection of deep learning implementations, from first principles in NumPy th
 |---------|-------|-------|----------|------------|
 | [Simple Neural Net](./a_simple-neural-net/) | Fundamentals | NumPy | From scratch | Neuron → layer → network → backprop + MNIST training |
 | [Simple Vision Model](./b_simple-vision-model/) | Image classification | TensorFlow / Keras | Baseline | Flatten + dense classifier on MNIST |
-| [LeNet Models](./c_lenet-models/) | Convolutional networks | TensorFlow / Keras | Architecture | LeNet-5 via Sequential and Model subclass APIs |
+| [LeNet Models](./c_lenet-models/) | Convolutional networks | TensorFlow / Keras | Trained | LeNet-5 architecture + ~99% MNIST accuracy |
 
 ## How to explore
 
 1. Start with **[Simple Neural Net](./a_simple-neural-net/)** — files are ordered `a_` through `d_` and build on each other conceptually.
 2. Move to **[Simple Vision Model](./b_simple-vision-model/)** for a high-level Keras baseline on the same dataset.
-3. See **[LeNet Models](./c_lenet-models/)** for a classic CNN architecture and two Keras construction styles.
+3. See **[LeNet Models](./c_lenet-models/)** for a classic CNN architecture, two Keras construction styles, and trained MNIST results.
 
 Each project folder has its own README with problem context, approach, and run instructions.
 
